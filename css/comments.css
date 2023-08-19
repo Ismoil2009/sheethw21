@@ -1,0 +1,9 @@
+.card-row {
+  padding-bottom: 30px;
+}
+
+.card-row .card {
+  background-color: transparent;
+  border: 1px solid white;
+  background-color: white;
+}
