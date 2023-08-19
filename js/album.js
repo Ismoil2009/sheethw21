@@ -2,29 +2,6 @@ const cardRow = document.querySelector(".card-row");
 
 const userId = JSON.parse(localStorage.getItem("userId"));
 
-function getData(url) {
-  class ErrorResponse extends Error {
-    constructor(status, message) {
-      super(message);
-      this.status = status;
-    }
-  }
-
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          reject(new ErrorResponse(res.status, "Url is error"));
-        }
-      })
-      .then((res) => {
-        resolve(res);
-      });
-  });
-}
-
 function getAlbum({ title, id }) {
   return `
     <div class="col-md-4 col-lg-3 mb-3 text-center">
