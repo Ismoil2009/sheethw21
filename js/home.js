@@ -29,9 +29,6 @@ async function getObj() {
   a.map((el) => {
     cardRow.innerHTML += getCard(el);
   });
-
-  loader.innerHTML = "";
-  loader.style.height = "0px";
 }
 
 setTimeout(() => {

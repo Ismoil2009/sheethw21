@@ -12,7 +12,7 @@ function getData(url) {
         if (res.ok) {
           return res.json();
         } else {
-          reject(new ErrorResponse(res.status, "Url is error"));
+          reject(new ErrorResponse(res.status, "Url is wrong"));
         }
       })
       .then((res) => {
